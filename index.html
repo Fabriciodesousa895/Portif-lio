@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Fabricio de Sousa Evangelista</title>
+  <meta name="description" content="Fabricio de Sousa Evangelista — Programador Full Stack. Sistemas web integrados com banco de dados, estoque, financeiro e pedidos." />
+  <style>
+    :root{
+      --bg:#0f1724; /* dark blue-gray */
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#06b6d4;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0; background:linear-gradient(180deg,#071028 0%, #07121a 60%); color:#e6eef6; -webkit-font-smoothing:antialiased}
+    .container{max-width:var(--maxw); margin:36px auto; padding:24px}
+    header{display:flex;align-items:center;gap:20px}
+    .avatar{width:96px;height:96px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px;color:#021124;box-shadow:0 8px 30px rgba(2,17,36,0.6)}
+    h1{margin:0;font-size:26px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:20px;margin-top:24px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:20px;border-radius:var(--radius);box-shadow:0 6px 24px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .skill{background:var(--glass);padding:8px 10px;border-radius:999px;color:var(--muted);font-size:13px}
+    h2{margin:0 0 10px 0;font-size:18px}
+    .projects{display:grid;grid-template-columns: repeat(1, 1fr); gap:14px}
+    .proj{display:flex;flex-direction:column;padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.015));border:1px solid rgba(255,255,255,0.02)}
+    .proj-header{display:flex;align-items:center;justify-content:space-between}
+    .proj-title{font-weight:600}
+    .techs{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px}
+    .tech{font-size:12px;color:var(--muted);background:transparent;padding:6px;border-radius:8px;border:1px dashed rgba(255,255,255,0.03)}
+    .cta{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#7c3aed);color:#021124;font-weight:700;text-decoration:none}
+    .meta{font-size:13px;color:var(--muted)}
+    aside .card + .card{margin-top:14px}
+    .contact input,.contact textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;margin-top:8px}
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+    @media (max-width:980px){.grid{grid-template-columns:1fr}.avatar{width:76px;height:76px;font-size:22px}}
+
+    /* small helper styles */
+    .muted{color:var(--muted)}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">FS</div>
+      <div>
+        <h1>Fabricio de Sousa Evangelista — Programador Full Stack</h1>
+        <p class="lead">Desenvolvo sistemas web integrados com banco de dados: controle de estoque, financeiro e pedidos. Goiânia, GO.</p>
+        <div style="margin-top:10px">
+          <span class="pill">Full Stack</span>
+          <span class="pill" style="margin-left:8px">Sistemas integrados</span>
+          <span class="pill" style="margin-left:8px">Banco de dados / PL/SQL</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- main -->
+      <main>
+        <div class="card">
+          <h2>Sobre</h2>
+          <p class="meta">Sou Fabricio, programador Full Stack baseado em Goiânia. Tenho experiência em criar telas e serviços que integram sistemas distintos, permitindo visão única de informações críticas como estoque, finanças e pedidos. Gosto de soluções práticas que deixam a operação do cliente mais simples.</p>
+
+          <h2 style="margin-top:18px">Habilidades</h2>
+          <div class="skills">
+            <div class="skill">HTML/CSS/JS</div>
+            <div class="skill">Bootstrap</div>
+            <div class="skill">Delphi</div>
+            <div class="skill">PL/SQL / Oracle</div>
+            <div class="skill">APIs / Integração</div>
+            <div class="skill">REST / JSON</div>
+            <div class="skill">Modelagem de dados</div>
+            <div class="skill">Controle de estoque</div>
+          </div>
+
+          <h2 style="margin-top:18px">Projetos</h2>
+          <div class="projects">
+
+            <!-- Project 1: integração estoques -->
+            <article class="proj">
+              <div class="proj-header">
+                <div>
+                  <div class="proj-title">Visão Única de Estoque - Integração de 2 sistemas</div>
+                  <div class="meta">Cliente: sistema de integração de estoques (ambiente de produção)</div>
+                </div>
+                <div class="muted">Janeiro 2025</div>
+              </div>
+              <p style="margin-top:10px">Projeto que integra dados de estoque de dois sistemas distintos (cada um com banco de dados separado) em uma única tela. O objetivo é fornecer aos usuários uma visão consolidada do estoque da empresa sem necessidade de acessar múltiplos sistemas.</p>
+              <div class="techs">
+                <div class="tech">Integração entre bancos</div>
+                <div class="tech">Consulta consolidada</div>
+                <div class="tech">Tela única de visualização</div>
+                <div class="tech">Delphi / PL/SQL</div>
+                <div class="tech">APIs / Middle-tier</div>
+              </div>
+              <a class="cta" href="#" onclick="openProject(event, 'proj-estoque')">Ver detalhes</a>
+            </article>
+
+            <!-- placeholder additional projects -->
+            <article class="proj">
+              <div class="proj-header">
+                <div>
+                  <div class="proj-title">Controle Financeiro - Lançamentos e Conciliação</div>
+                  <div class="meta">Sistema web para controle de contas e integrações bancárias</div>
+                </div>
+                <div class="muted">2024</div>
+              </div>
+              <p style="margin-top:10px">Tela de gestão financeira com lançamentos, conciliação e relatórios exportáveis. Integra com contas a pagar/receber e centraliza informações para relatórios gerenciais.</p>
+              <div class="techs">
+                <div class="tech">Relatórios</div>
+                <div class="tech">Export CSV / PDF</div>
+                <div class="tech">SQL otimizado</div>
+              </div>
+              <a class="cta" href="#" onclick="openProject(event, 'proj-fin')">Ver detalhes</a>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- detail modal area (simple) -->
+        <div id="proj-estoque" class="card" style="margin-top:16px;display:none">
+          <h2>Detalhes: Visão Única de Estoque</h2>
+          <p class="meta">Resumo técnico do projeto de integração.</p>
+          <ul style="margin-top:10px;color:var(--muted)">
+            <li>Fonte de dados: dois bancos de dados distintos (sistemas legados) com consultas consolidadas em camada intermediária.</li>
+            <li>Abordagem: criação de middle-tier (API / serviço) que agrega informações e entrega JSON para a interface web.</li>
+            <li>Interface: tela única com filtros por produto, filial e localização, pesquisa rápida e exportação de relatórios.</li>
+            <li>Benefício: evita divergência de inventário, reduz tempo de conferência manual e centraliza decisões.</li>
+          </ul>
+          <p style="margin-top:10px">Se preferir, eu posso gerar uma documentação técnica do projeto com diagrama de arquitetura, endpoints e exemplos de queries/PLSQL.</p>
+          <a class="cta" href="mailto:seuemail@exemplo.com?subject=Interesse%20no%20projeto%20de%20estoque">Entrar em contato</a>
+        </div>
+
+      </main>
+
+      <!-- aside -->
+      <aside>
+        <div class="card">
+          <h2>Contato</h2>
+          <p class="muted">Goiânia, GO</p>
+          <p style="margin-top:10px">Email: <strong>seuemail@exemplo.com</strong></p>
+          <p>Telefone: <strong>(xx) xxxx-xxxx</strong></p>
+          <div style="margin-top:12px">
+            <a class="cta" href="mailto:seuemail@exemplo.com">Me enviar email</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Como trabalho</h2>
+          <p class="meta">Entrego soluções integradas, com foco em clareza para o usuário final e consultas ao banco de dados seguras e performáticas.</p>
+          <div style="margin-top:12px">
+            <div class="muted">Principais etapas:</div>
+            <ol style="margin:8px 0 0 18px;color:var(--muted)">
+              <li>Levantamento de requisitos e mapeamento das fontes de dados</li>
+              <li>Proposta de arquitetura e protótipo rápido</li>
+              <li>Desenvolvimento e testes integrados</li>
+              <li>Entrega e suporte</li>
+            </ol>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+
+    <footer>
+      <div>Feito por <strong>Fabricio de Sousa Evangelista</strong> — Programador Full Stack • Goiânia</div>
+    </footer>
+  </div>
+
+  <script>
+    function openProject(e, id){
+      e.preventDefault();
+      const el = document.getElementById(id);
+      if(!el) return;
+      // toggle
+      el.style.display = (el.style.display === 'none' || el.style.display === '') ? 'block' : 'none';
+      // scroll into view
+      if(el.style.display === 'block') el.scrollIntoView({behavior:'smooth', block:'center'});
+    }
+  </script>
+</body>
+</html>
